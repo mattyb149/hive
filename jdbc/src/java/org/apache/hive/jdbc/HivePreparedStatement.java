@@ -447,8 +447,8 @@ public class HivePreparedStatement extends HiveStatement implements PreparedStat
    */
 
   public void setDate(int parameterIndex, Date x, Calendar cal) throws SQLException {
-    // TODO Auto-generated method stub
-    throw new SQLException("Method not supported");
+    cal.setTime( x );
+    this.parameters.put(parameterIndex, cal.getTime().toString());
   }
 
   /*
@@ -705,8 +705,7 @@ public class HivePreparedStatement extends HiveStatement implements PreparedStat
    */
 
   public void setTime(int parameterIndex, Time x) throws SQLException {
-    // TODO Auto-generated method stub
-    throw new SQLException("Method not supported");
+    this.parameters.put(parameterIndex, x.toString());
   }
 
   /*
@@ -717,8 +716,8 @@ public class HivePreparedStatement extends HiveStatement implements PreparedStat
    */
 
   public void setTime(int parameterIndex, Time x, Calendar cal) throws SQLException {
-    // TODO Auto-generated method stub
-    throw new SQLException("Method not supported");
+    cal.setTime( x );
+    this.parameters.put(parameterIndex, cal.getTime().toString());
   }
 
   /*
@@ -740,8 +739,8 @@ public class HivePreparedStatement extends HiveStatement implements PreparedStat
 
   public void setTimestamp(int parameterIndex, Timestamp x, Calendar cal)
       throws SQLException {
-    // TODO Auto-generated method stub
-    throw new SQLException("Method not supported");
+    cal.setTime( x );
+    this.parameters.put(parameterIndex, cal.getTime().toString());
   }
 
   /*
